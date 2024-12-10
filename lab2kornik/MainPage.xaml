@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="lab2kornik.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <Button Text="Select XML File" Clicked="OnPickFileClicked" />
+        <Label x:Name="fileLabel" Text="No file selected" FontSize="Medium" />
+        <Button Text="SAX" Clicked="OnSaxClicked" />
+        <Button Text="DOM" Clicked="OnDomClicked" />
+        <Button Text="LINQ" Clicked="OnLinqClicked" />
+        <Label x:Name="resultLabel" Text="" FontSize="Medium" />
+        <Button Text="Clear" Clicked="OnClearClicked" />
+        <Button Text="View HTML" Clicked="OnViewHtmlClicked" />
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Button Text="Exit" Clicked="OnExitClicked" />
+        </VerticalStackLayout>
+        <WebView x:Name="HtmlWebView" HeightRequest="600" />
+    </VerticalStackLayout>
+</ContentPage>
